@@ -1,4 +1,86 @@
-/* ====== RESET ====== */ * { margin: 0; padding: 0; box-sizing: border-box; } body { font-family: "Poppins", sans-serif; line-height: 1.7; color: #2e2e2e; background: #f8f9fb; scroll-behavior: smooth; } /* ====== NAVBAR ====== */ header { background: rgba(44, 62, 80, 0.9); padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(10px); } .navbar { display: flex; justify-content: space-between; align-items: center; } .logo { color: #fff; font-size: 1.6rem; font-weight: 600; letter-spacing: 1px; } .nav-links { list-style: none; display: flex; gap: 1.8rem; } .nav-links a { text-decoration: none; color: #eaeaea; font-weight: 500; transition: color 0.3s, transform 0.2s; } .nav-links a:hover { color: #50c9ba; transform: translateY(-2px); } /* ====== SECTIONS ====== */ .section { padding: 5rem 2rem; text-align: center; } /* Inicio */ .inicio { background: linear-gradient(to right, #4a90e2, #50c9ba); color: #fff; min-height: 95vh; display: flex; align-items: center; justify-content: center; flex-direction: column; } .inicio h2 { font-size: 2.5rem; font-weight: 700; } .inicio h2 span { color: #ffe082; } /* Botón */ .btn { display: inline-block; padding: 0.8rem 2rem; margin-top: 1.5rem; background: #4a90e2; color: #fff; font-weight: 500; border: none; border-radius: 30px; cursor: pointer; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(74,144,226,0.25); } .btn:hover { background: #3a78c2; transform: translateY(-3px); box-shadow: 0 6px 16px rgba(58,120,194,0.3); }: left;
+/* ====== RESET ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.7;
+  color: #2c2e50; /* gris oscuro elegante */
+  background: #fdfdfd; /* fondo blanco muy claro */
+  scroll-behavior: smooth;
+}
+
+/* ===== NAVBAR ===== */
+header {
+  background: rgba(44, 62, 80, 0.9);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+/* ===== BOTONES DE NAV ===== */
+.btn-nav {
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  background: #4a90e2;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-nav:hover {
+  background: #357ABD;
+  transform: scale(1.05);
+}
+
+/* ===== ACTIVO ===== */
+.btn-nav.active {
+  background: #50c9ba;
+  box-shadow: 0 0 10px rgba(80, 201, 186, 0.7);
+}
+
+/* ====== SECTIONS ====== */
+.section {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+/* Inicio */
+.inicio {
+  background: #2980b9; /* azul elegante */
+  color: #fff;
+  min-height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .inicio h2 {
@@ -7,30 +89,51 @@
 }
 
 .inicio h2 span {
-  color: #ffe082;
+  color: #e74c3c; /* rojo */
+}
+
+/* Botón */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  margin-top: 1.5rem;
+  background: #8e44ad; /* morado */
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(142, 68, 173, 0.25);
+}
+
+.btn:hover {
+  background: #6c3483; /* morado más oscuro */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(108, 52, 131, 0.3);
 }
 
 /* Imagen de perfil */
 .inicio img {
-  width: 250px;   /* ajusta el tamaño de la foto */
+  width: 250px;
   height: auto;
-  border-radius: 12px; /* bordes redondeados */
+  border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
   object-fit: cover;
 }
-
 
 /* ====== HABILIDADES ====== */
 .habilidades {
   text-align: center;
   padding: 4rem 2rem;
-  background-color: #f9f9f9; /* fondo suave */
+  background-color: #fdfdfd; /* fondo blanco */
 }
 
 .habilidades h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: #333;
+  color: #2c2e50;
 }
 
 .skills-grid {
@@ -41,11 +144,11 @@
 }
 
 .skill-btn {
-  background-color: #e0f0ff; /* color suave azul */
-  color: #1a1a1a;
+  background-color: #2980b9; /* azul */
+  color: #fff;
   border: none;
   padding: 0.7rem 1.5rem;
-  border-radius: 25px; /* bordes redondeados */
+  border-radius: 25px;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -53,11 +156,10 @@
 }
 
 .skill-btn:hover {
-  background-color: #b8e0ff; /* efecto hover más intenso */
+  background-color: #21618c; /* azul más oscuro */
   transform: translateY(-2px);
   box-shadow: 0 6px 8px rgba(0,0,0,0.15);
 }
-
 
 /* ======= PROYECTOS ======= */
 .proyectos {
@@ -66,7 +168,7 @@
 
 .grid-proyectos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* más ancho */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -74,35 +176,36 @@
 .card {
   background: #fff;
   border-radius: 1.2rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   padding: 1.5rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card img {
   width: 100%;
-  height: 220px; /* aumentamos la altura */
+  height: 220px;
   object-fit: cover;
   border-radius: 1rem;
   margin-bottom: 1rem;
 }
 
 .card h3 {
-  font-size: 1.4rem; /* título un poco más grande */
+  font-size: 1.4rem;
   margin-bottom: 0.5rem;
+  color: #2c2e50;
 }
 
 .card p {
   font-size: 1rem;
-  color: #555;
+  color: #636e72;
 }
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
-
+/* ====== CONTACTO ====== */
 .redes-contacto {
   display: flex;
   gap: 20px;
@@ -111,12 +214,63 @@
 }
 
 .logo-contacto {
-  font-size: 2.5rem; /* tamaño del icono */
-  color: #333;       /* color base */
+  font-size: 2.5rem;
+  color: #2980b9; /* azul */
   transition: color 0.3s ease;
 }
 
 .logo-contacto:hover {
-  color: #4a90e2; /* color al pasar el mouse */
+  color: #e74c3c; /* rojo */
 }
+
+/* ====== COLORES EXTRA: AZUL, ROJO Y MORADO ====== */
+
+/* Azul */
+.color-azul {
+  color: #2980b9;
+}
+.bg-azul {
+  background-color: #2980b9;
+  color: #fff;
+}
+.bg-azul:hover {
+  background-color: #21618c;
+}
+
+/* Rojo */
+.color-rojo {
+  color: #e74c3c;
+}
+.bg-rojo {
+  background-color: #e74c3c;
+  color: #fff;
+}
+.bg-rojo:hover {
+  background-color: #c0392b;
+}
+
+/* Morado */
+.color-morado {
+  color: #8e44ad;
+}
+.bg-morado {
+  background-color: #8e44ad;
+  color: #fff;
+}
+.bg-morado:hover {
+  background-color: #6c3483;
+}
+
+/* ====== FOOTER ====== */
+.footer {
+  background: #2980b9; /* azul */
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+
 
