@@ -59,59 +59,64 @@
 }
 
 
-/* Proyectos */
+/* ======= PROYECTOS ======= */
+.proyectos {
+  text-align: center;
+}
+
 .grid-proyectos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* más ancho */
   gap: 2rem;
   margin-top: 2rem;
 }
 
 .card {
   background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  overflow: hidden;
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card img {
   width: 100%;
-  height: 180px;
+  height: 220px; /* aumentamos la altura */
   object-fit: cover;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
 }
+
+.card h3 {
+  font-size: 1.4rem; /* título un poco más grande */
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
 
 .redes-contacto {
-  text-align: center;
-  margin-top: 2rem;
-  font-size: 1.1rem;
-}
-
-.redes-contacto p {
-  margin: 0.5rem 0;
   display: flex;
-  align-items: center;
+  gap: 20px;
   justify-content: center;
-  gap: 0.5rem; /* espacio entre logo y texto */
-}
-
-.redes-contacto a {
-  text-decoration: none;
-  color: #333;
-  transition: color 0.3s ease;
-}
-
-.redes-contacto a:hover {
-  color: #0077b5; /* color hover para LinkedIn, puedes personalizar por cada red */
+  margin-top: 1rem;
 }
 
 .logo-contacto {
-  width: 24px;  /* tamaño del logo */
-  height: 24px;
-  object-fit: contain;
+  font-size: 2.5rem; /* tamaño del icono */
+  color: #333;       /* color base */
+  transition: color 0.3s ease;
+}
+
+.logo-contacto:hover {
+  color: #4a90e2; /* color al pasar el mouse */
 }
 
