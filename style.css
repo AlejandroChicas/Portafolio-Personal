@@ -1,276 +1,330 @@
-/* ====== RESET ====== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* ==============================
+   ESTILOS GENERALES
+============================== */
 body {
   font-family: "Poppins", sans-serif;
-  line-height: 1.7;
-  color: #2c2e50; /* gris oscuro elegante */
-  background: #fdfdfd; /* fondo blanco muy claro */
+  margin: 0;
+  padding: 0;
+  background-color: #F4F6FA;
+  color: #0078FF;
   scroll-behavior: smooth;
 }
 
-/* ===== NAVBAR ===== */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.2em;
+  color: #0078FF;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ==============================
+   NAVBAR
+============================== */
 header {
-  background: rgba(44, 62, 80, 0.9);
-  padding: 1rem 2rem;
+  background-color: #0078FF;
+  color: #fff;
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .navbar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
 }
 
 .logo {
-  color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.5em;
   font-weight: bold;
+  color: white;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 25px;
 }
 
-.nav-links li {
-  display: inline-block;
-}
-
-/* ===== BOTONES DE NAV ===== */
-.btn-nav {
+.nav-links li a {
   text-decoration: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 25px;
-  background: #4a90e2;
-  color: white;
-  font-weight: 500;
-  transition: 0.3s ease-in-out;
-}
-
-.btn-nav:hover {
-  background: #357ABD;
-  transform: scale(1.05);
-}
-
-/* ===== ACTIVO ===== */
-.btn-nav.active {
-  background: #50c9ba;
-  box-shadow: 0 0 10px rgba(80, 201, 186, 0.7);
-}
-
-/* ====== SECTIONS ====== */
-.section {
-  padding: 5rem 2rem;
-  text-align: center;
-}
-
-/* Inicio */
-.inicio {
-  background: #2980b9; /* azul elegante */
   color: #fff;
-  min-height: 95vh;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #00C3FF;
+}
+
+/* ==============================
+   SECCIÓN: SOY JOSUÉ
+============================== */
+.inicio {
+  background-color: #ffffff; /* Fondo blanco */
+  color: #3F3D56; /* Texto en gris oscuro */
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  align-items: center;
+  padding: 100px 20px;
 }
 
 .inicio h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #6C63FF; /* Color principal violeta */
 }
 
-.inicio h2 span {
-  color: #e74c3c; /* rojo */
+.inicio h3 {
+  color: #3F3D56; /* Color del subtítulo */
 }
 
-/* Botón */
+/* ====== FOTO DE PERFIL ====== */
+.foto-perfil img {
+  width: 180px;
+  height: 180px;
+  border-radius: 15px; /* Marco cuadrado con bordes ligeramente redondeados */
+  margin-top: 20px;
+  border: 4px solid #6C63FF; /* Borde violeta */
+  object-fit: cover; /* Ajusta la imagen dentro del marco */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra sutil para resaltar */
+}
+
+
+
+/* ==============================
+   SECCIÓN: SOBRE MÍ
+============================== */
+.sobre-mi {
+  background-color: #fff;
+  color: #333;
+  max-width: 900px;
+  margin: auto;
+}
+
+.sobre-mi p {
+  text-align: justify;
+  margin-bottom: 30px;
+}
+
 .btn {
   display: inline-block;
-  padding: 0.8rem 2rem;
-  margin-top: 1.5rem;
-  background: #8e44ad; /* morado */
-  color: #fff;
-  font-weight: 500;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
+  padding: 10px 25px;
+  background-color: #00C3FF;
+  color: white;
   text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(142, 68, 173, 0.25);
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  font-weight: 500;
 }
 
 .btn:hover {
-  background: #6c3483; /* morado más oscuro */
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(108, 52, 131, 0.3);
+  background-color: #0078FF;
 }
 
-/* Imagen de perfil */
-.inicio img {
-  width: 550px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-  object-fit: cover;
-}
-
-/* ====== HABILIDADES ====== */
-.habilidades {
-  text-align: center;
-  padding: 4rem 2rem;
-  background-color: #fdfdfd; /* fondo blanco */
-}
-
-.habilidades h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #2c2e50;
+/* ==============================
+   SECCIÓN: LENGUAJES DE PROGRAMACIÓN
+============================== */
+.lenguajes {
+  background-color: #F4F6FA;
 }
 
 .skills-grid {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 20px;
 }
 
 .skill-btn {
-  background-color: #2980b9; /* azul */
-  color: #fff;
+  background-color: #00C3FF;
+  color: white;
   border: none;
-  padding: 0.7rem 1.5rem;
-  border-radius: 25px;
-  font-size: 1rem;
+  padding: 12px 25px;
+  border-radius: 30px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  font-size: 1em;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .skill-btn:hover {
-  background-color: #21618c; /* azul más oscuro */
-  transform: translateY(-2px);
-  box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+  background-color: #0078FF;
+  transform: scale(1.05);
 }
 
-/* ======= PROYECTOS ======= */
-.proyectos {
+/* ==============================
+   SECCIÓN: HABILIDADES
+============================== */
+.habilidades {
+  background-color: #fff;
+  padding: 80px 20px;
   text-align: center;
+}
+
+.habilidades h2 {
+  color: #0078FF;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+.habilidades-contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  justify-items: center;
+  align-items: start;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.habilidad-columna {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 100%;
+}
+
+.habilidad-columna h3 {
+  color: #0078FF;
+  margin-bottom: 20px;
+}
+
+.habilidad-columna ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.habilidad-columna li {
+  margin: 10px 0;
+  padding-left: 25px;
+  position: relative;
+  color: #333;
+  font-weight: 500;
+}
+
+.habilidad-columna li::before {
+  content: "✔";
+  color: #00C3FF;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+
+/* ==============================
+   SECCIÓN: PROYECTOS
+============================== */
+.proyectos {
+  background-color: #ffffff; /* Fondo blanco */
+  padding: 60px 20px; /* Espaciado superior e inferior */
+  text-align: center;
+}
+
+.proyectos h2 {
+  color: #0078FF; /* Color azul */
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: bold;
 }
 
 .grid-proyectos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start; /* Para que las tarjetas estén alineadas */
 }
 
 .card {
-  background: #fff;
-  border-radius: 1.2rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  padding: 1.5rem;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0; /* borde suave para definición */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 1rem;
-  margin-bottom: 1rem;
-}
-
-.card h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-  color: #2c2e50;
-}
-
-.card p {
-  font-size: 1rem;
-  color: #636e72;
 }
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* ====== CONTACTO ====== */
+.card img {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+  object-fit: contain; /* Para que no se recorte la imagen */
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  margin: 10px 0;
+  color: ##0078FF; /* Color azul */
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+
+/* ==============================
+   SECCIÓN: CONTACTO
+============================== */
+.contacto {
+  background-color: #fff;
+}
+
 .redes-contacto {
   display: flex;
-  gap: 20px;
   justify-content: center;
-  margin-top: 1rem;
+  gap: 30px;
+  margin-top: 20px;
 }
 
 .logo-contacto {
-  font-size: 2.5rem;
-  color: #2980b9; /* azul */
-  transition: color 0.3s ease;
+  font-size: 2.5em;
+  color: #0078FF;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .logo-contacto:hover {
-  color: #e74c3c; /* rojo */
+  color: #00C3FF;
+  transform: scale(1.2);
 }
 
-/* ====== COLORES EXTRA: AZUL, ROJO Y MORADO ====== */
-
-/* Azul */
-.color-azul {
-  color: #2980b9;
-}
-.bg-azul {
-  background-color: #2980b9;
-  color: #fff;
-}
-.bg-azul:hover {
-  background-color: #21618c;
-}
-
-/* Rojo */
-.color-rojo {
-  color: #e74c3c;
-}
-.bg-rojo {
-  background-color: #e74c3c;
-  color: #fff;
-}
-.bg-rojo:hover {
-  background-color: #c0392b;
-}
-
-/* Morado */
-.color-morado {
-  color: #8e44ad;
-}
-.bg-morado {
-  background-color: #8e44ad;
-  color: #fff;
-}
-.bg-morado:hover {
-  background-color: #6c3483;
-}
-
-/* ====== FOOTER ====== */
+/* ==============================
+   FOOTER
+============================== */
 .footer {
-  background: #2980b9; /* azul */
-  color: #ffffff;
+  background-color: #0078FF;
+  color: white;
   text-align: center;
-  padding: 1.5rem 1rem;
-  margin-top: 3rem;
-  font-size: 0.95rem;
+  padding: 20px;
+  font-size: 0.9em;
+}
+
+.footer p {
+  margin: 0;
   letter-spacing: 0.5px;
 }
-
 
 
