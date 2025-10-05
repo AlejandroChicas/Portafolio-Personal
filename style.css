@@ -1,42 +1,67 @@
 /* ==============================
    ESTILOS GENERALES
 ============================== */
+:root {
+  --bg-color: #F4F6FA;
+  --text-color: #0078FF;
+  --secondary-color: #00C3FF;
+  --card-bg: #ffffff;
+  --border-color: #e0e0e0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --navbar-bg: #0078FF;
+  --footer-bg: #0078FF;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --secondary-color: #00C3FF;
+  --card-bg: #1e1e1e;
+  --border-color: #333;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --navbar-bg: #1a1a1a;
+  --footer-bg: #1a1a1a;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #F4F6FA;
-  color: #0078FF;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   scroll-behavior: smooth;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .section {
   padding: 80px 20px;
   text-align: center;
+  background-color: var(--bg-color);
 }
 
 h2 {
   font-size: 2.2em;
-  color: #0078FF;
+  color: var(--text-color);
   margin-bottom: 20px;
 }
 
 p {
   font-size: 1.1em;
   line-height: 1.6;
-  color: #333;
+  color: var(--text-color);
 }
 
 /* ==============================
    NAVBAR
 ============================== */
 header {
-  background-color: #0078FF;
+  background-color: var(--navbar-bg);
   color: #fff;
   position: sticky;
   top: 0;
   z-index: 1000;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
 }
 
 .navbar {
@@ -66,79 +91,160 @@ header {
 }
 
 .nav-links li a:hover {
-  color: #00C3FF;
+  color: var(--secondary-color);
+}
+
+.navbar-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.language-selector select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  background-color: white;
+  color: #333;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+.theme-toggle .theme-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  padding: 5px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle .theme-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* ==============================
-   SECCIÓN: SOY JOSUÉ
+   SECCIÓN: INICIO
 ============================== */
 .inicio {
-  background-color: #ffffff; /* Fondo blanco */
-  color: #3F3D56; /* Texto en gris oscuro */
+  background-color: var(--bg-color);
+  color: var(--text-color);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 100px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .inicio h2 {
   font-size: 2.5em;
   margin-bottom: 10px;
-  color: #6C63FF; /* Color principal violeta */
+  color: var(--text-color);
 }
 
 .inicio h3 {
-  color: #3F3D56; /* Color del subtítulo */
+  color: var(--text-color);
 }
 
 /* ====== FOTO DE PERFIL ====== */
 .foto-perfil img {
-  width: 180px;
-  height: 180px;
-  border-radius: 15px; /* Marco cuadrado con bordes ligeramente redondeados */
+  width: 350px;
+  height: 300px;
+  border-radius: 5px;
   margin-top: 20px;
-  border: 4px solid #6C63FF; /* Borde violeta */
-  object-fit: cover; /* Ajusta la imagen dentro del marco */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra sutil para resaltar */
+  border: 4px solid var(--secondary-color);
+  object-fit: cover;
+  box-shadow: 0 4px 5px var(--shadow-color);
 }
-
-
 
 /* ==============================
-   SECCIÓN: SOBRE MÍ
+   SECCIÓN: SOBRE MÍ - FONDO UNIFICADO
 ============================== */
 .sobre-mi {
-  background-color: #fff;
-  color: #333;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  max-width: 100%;
+  margin: 0;
+  padding: 80px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.sobre-mi-contenedor {
   max-width: 900px;
-  margin: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
-.sobre-mi p {
+.sobre-mi-contenido {
+  background-color: var(--card-bg);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px var(--shadow-color);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.sobre-mi-contenido:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px var(--shadow-color);
+}
+
+.texto-sobre-mi p {
   text-align: justify;
-  margin-bottom: 30px;
+  margin-bottom: 0;
+  line-height: 1.8;
+  font-size: 1.1em;
+  color: var(--text-color);
 }
 
-.btn {
-  display: inline-block;
-  padding: 10px 25px;
-  background-color: #00C3FF;
-  color: white;
+.cv-descarga {
+  text-align: center;
+  padding: 20px;
+}
+
+.btn-cv {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 30px;
+  background: linear-gradient(135deg, var(--secondary-color), var(--text-color));
+  color: rgb(255, 255, 255);
   text-decoration: none;
-  border-radius: 6px;
-  transition: background 0.3s ease;
-  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 1.1em;
+  box-shadow: 0 4px 15px rgba(0, 115, 255, 0.999);
 }
 
-.btn:hover {
-  background-color: #0078FF;
+.btn-cv:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 195, 255, 0.4);
+  background: linear-gradient(135deg, var(--text-color), var(--secondary-color));
+}
+
+.btn-cv i {
+  font-size: 1.1em;
 }
 
 /* ==============================
    SECCIÓN: LENGUAJES DE PROGRAMACIÓN
 ============================== */
 .lenguajes {
-  background-color: #F4F6FA;
+  background-color: var(--bg-color);
+  padding: 80px 20px;
+  transition: background-color 0.3s ease;
 }
 
 .skills-grid {
@@ -149,7 +255,7 @@ header {
 }
 
 .skill-btn {
-  background-color: #00C3FF;
+  background-color: var(--secondary-color);
   color: white;
   border: none;
   padding: 12px 25px;
@@ -160,25 +266,30 @@ header {
 }
 
 .skill-btn:hover {
-  background-color: #0078FF;
+  background-color: var(--text-color);
   transform: scale(1.05);
 }
 
 /* ==============================
    SECCIÓN: HABILIDADES
 ============================== */
+
+/* 1. SECCIÓN PRINCIPAL */
 .habilidades {
-  background-color: #fff;
+  background-color: var(--bg-color);
   padding: 80px 20px;
   text-align: center;
+  transition: background-color 0.3s ease;
 }
 
+/* 2. TÍTULO DE LA SECCIÓN */
 .habilidades h2 {
-  color: #0078FF;
+  color: var(--text-color);
   font-size: 2.2rem;
   margin-bottom: 40px;
 }
 
+/* 3. CONTENEDOR DE LAS CARTAS */
 .habilidades-contenedor {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -189,19 +300,24 @@ header {
   margin: 0 auto;
 }
 
+/* 4. ESTILOS DE LA CARTA INDIVIDUAL */
 .habilidad-columna {
-  background-color: #f9f9f9;
-  padding: 30px;
+  background-color: var(--card-bg);
+  padding: 10px;
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px var(--shadow-color);
   width: 100%;
+  border: 1px solid var(--border-color);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* 5. TÍTULO DE LA CARTA */
 .habilidad-columna h3 {
-  color: #0078FF;
-  margin-bottom: 20px;
+  color: var(--text-color);
+  margin-bottom: 25px;
 }
 
+/* 6. LISTA DE HABILIDADES */
 .habilidad-columna ul {
   list-style: none;
   padding: 0;
@@ -212,30 +328,29 @@ header {
   margin: 10px 0;
   padding-left: 25px;
   position: relative;
-  color: #333;
+  color: var(--text-color);
   font-weight: 500;
 }
 
 .habilidad-columna li::before {
   content: "✔";
-  color: #00C3FF;
+  color: var(--secondary-color);
   position: absolute;
   left: 0;
   font-weight: bold;
 }
-
-
 /* ==============================
    SECCIÓN: PROYECTOS
 ============================== */
 .proyectos {
-  background-color: #ffffff; /* Fondo blanco */
-  padding: 60px 20px; /* Espaciado superior e inferior */
+  background-color: var(--bg-color);
+  padding: 80px 20px;
   text-align: center;
+  transition: background-color 0.3s ease;
 }
 
 .proyectos h2 {
-  color: #0078FF; /* Color azul */
+  color: var(--text-color);
   font-size: 2.5rem;
   margin-bottom: 40px;
   font-weight: bold;
@@ -247,50 +362,50 @@ header {
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
-  align-items: start; /* Para que las tarjetas estén alineadas */
+  align-items: start;
 }
 
 .card {
-  background-color: #ffffff;
-  border: 1px solid #e0e0e0; /* borde suave para definición */
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 10px var(--shadow-color);
   padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px var(--shadow-color);
 }
 
 .card img {
   width: 100%;
   height: 180px;
   border-radius: 10px;
-  object-fit: contain; /* Para que no se recorte la imagen */
+  object-fit: contain;
   margin-bottom: 15px;
 }
 
 .card h3 {
   margin: 10px 0;
-  color: ##0078FF; /* Color azul */
+  color: var(--text-color);
   font-size: 1.2rem;
   font-weight: 700;
 }
 
 .card p {
-  color: #555;
+  color: var(--text-color);
   font-size: 0.95rem;
   line-height: 1.4;
 }
-
 
 /* ==============================
    SECCIÓN: CONTACTO
 ============================== */
 .contacto {
-  background-color: #fff;
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease;
 }
 
 .redes-contacto {
@@ -302,12 +417,12 @@ header {
 
 .logo-contacto {
   font-size: 2.5em;
-  color: #0078FF;
+  color: var(--text-color);
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .logo-contacto:hover {
-  color: #00C3FF;
+  color: var(--secondary-color);
   transform: scale(1.2);
 }
 
@@ -315,16 +430,67 @@ header {
    FOOTER
 ============================== */
 .footer {
-  background-color: #0078FF;
+  background-color: var(--footer-bg);
   color: white;
   text-align: center;
   padding: 20px;
   font-size: 0.9em;
+  transition: background-color 0.3s ease;
 }
 
 .footer p {
   margin: 0;
   letter-spacing: 0.5px;
+  color: white;
 }
 
-
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 768px) {
+  .inicio {
+    padding: 80px 15px;
+  }
+  
+  .sobre-mi {
+    padding: 60px 15px;
+    gap: 30px;
+  }
+  
+  .sobre-mi-contenido {
+    padding: 30px 20px;
+  }
+  
+  .texto-sobre-mi p {
+    font-size: 1em;
+    line-height: 1.6;
+  }
+  
+  .cv-descarga {
+    padding: 20px 15px;
+  }
+  
+  .btn-cv {
+    padding: 12px 25px;
+    font-size: 1em;
+  }
+  
+  .navbar {
+    padding: 15px 20px;
+    flex-wrap: wrap;
+  }
+  
+  .nav-links {
+    gap: 15px;
+  }
+  
+  .navbar-controls {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .section {
+    padding: 60px 15px;
+  }
+}

@@ -9,52 +9,71 @@
 </head>
 <body>
 
-
 <!-- ======= NAVBAR ======= -->
 <header>
   <nav class="navbar">
-    <h1 class="logo">Mi Portafolio Personal</h1>
+    <h1 class="logo" data-translate="portfolio-title">Mi Portafolio Personal</h1>
     <ul class="nav-links">
-      <li><a href="#inicio" class="btn-nav">Inicio</a></li>
-      <li><a href="#sobre-mi" class="btn-nav">Sobre mí</a></li>
-      <li><a href="#proyectos" class="btn-nav">Proyectos</a></li>
-      <li><a href="#contacto" class="btn-nav">Contacto</a></li>
+      <li><a href="#inicio" class="btn-nav" data-translate="nav-home">Inicio</a></li>
+      <li><a href="#sobre-mi" class="btn-nav" data-translate="nav-about">Sobre mí</a></li>
+      <li><a href="#proyectos" class="btn-nav" data-translate="nav-projects">Proyectos</a></li>
+      <li><a href="#contacto" class="btn-nav" data-translate="nav-contact">Contacto</a></li>
     </ul>
+    <div class="navbar-controls">
+      <div class="language-selector">
+        <select id="language-select">
+          <option value="es">Español</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+      <div class="theme-toggle">
+        <button id="theme-toggle" class="theme-btn">
+          <span class="theme-icon">🌙</span>
+        </button>
+      </div>
+    </div>
   </nav>
-  
 </header>
 
   <!-- ======= INICIO ======= -->
 <section id="inicio" class="section inicio">
   <div class="contenido">
-    <h2>Hola, Soy Josué Chicas  <span></span></h2>
+    <h2 data-translate="greeting">Hola, Soy Josué Chicas</h2>
   </div>
   <div class="foto-perfil">
     <img src="IMG_3524.JPG" alt="Foto de perfil">
   </div>
-  <p><h2>Áreas de interés:</h2>Desarrollo Móvil</p>
+  <p><h2 data-translate="interest-areas">Áreas de interés:</h2><span data-translate="mobile-dev">Desarrollo Móvil</span></p>
 </section>
-
-
 
   <!-- ======= SOBRE MÍ ======= -->
 <section id="sobre-mi" class="section sobre-mi">
-  <h2>Sobre mí</h2>
-  <p>
-    Soy estudiante de Técnico en Ingeniería y Sistemas Informáticas. 
-    Me encanta aprender cosas nuevas y trabajar en proyectos que resuelvan problemas reales.
-    Soy una persona comprometida, responsable y disciplinada, con gran capacidad de organización y adaptación. 
-    Me caracterizo por la honestidad, la integridad y la confianza, lo que guía mi actuar diario. 
-    Tengo una actitud proactiva, aporto soluciones creativas e innovadoras, y disfruto del trabajo en equipo fomentando la comunicación y el respeto. 
-    También poseo habilidades de liderazgo y mantengo una mentalidad de mejora continua, siempre en busca de nuevos conocimientos para aportar al éxito colectivo.
-  </p>
-  <a href="Currículum Vitae Cv  (1).pdf" target="_blank" download class="btn">Descargar CV</a>
+  <div class="sobre-mi-contenedor">
+    <div class="sobre-mi-contenido">
+      <h2 data-translate="about-me">Sobre mí</h2>
+      <div class="texto-sobre-mi">
+        <p data-translate="about-me-text">
+          Soy estudiante de Técnico en Ingeniería y Sistemas Informáticas. 
+          Me encanta aprender cosas nuevas y trabajar en proyectos que resuelvan problemas reales.
+          Soy una persona comprometida, responsable y disciplinada, con gran capacidad de organización y adaptación. 
+          Me caracterizo por la honestidad, la integridad y la confianza, lo que guía mi actuar diario. 
+          Tengo una actitud proactiva, aporto soluciones creativas e innovadoras, y disfruto del trabajo en equipo fomentando la comunicación y el respeto. 
+          También poseo habilidades de liderazgo y mantengo una mentalidad de mejora continua, siempre en busca de nuevos conocimientos para aportar al éxito colectivo.
+        </p>
+      </div>
+    </div>
+    
+    <div class="cv-descarga">
+      <a href="Currículum Vitae Cv  (2).pdf" target="_blank" download class="btn btn-cv" data-translate="download-cv">
+        <i class="fas fa-download"></i> Descargar CV
+      </a>
+    </div>
+  </div>
 </section>
 
-
-  <!-- ======= Lenguaje de Programacion Desarrollado ======= -->
-<section id="Lenguaje de Programacion Desarrollados" class="section Lenguaje de Programacion Desarrollado">
-  <h2>Lenguaje de Programacion Desarrollado</h2>
+  <!-- ======= LENGUAJES DE PROGRAMACIÓN ======= -->
+<section id="lenguajes" class="section lenguajes">
+  <h2 data-translate="programming-languages">Lenguajes de Programación Desarrollados</h2>
   <div class="skills-grid">
     <button class="skill-btn">HTML</button>
     <button class="skill-btn">Python</button>
@@ -64,80 +83,77 @@
 </section>
 
   <!-- ======= HABILIDADES ======= -->
-
 <section class="habilidades" id="habilidades">
-  <h2>Habilidades</h2>
+  <h2 data-translate="skills">Habilidades</h2>
 
   <div class="habilidades-contenedor">
     <div class="habilidad-columna">
-      <h3>Habilidades Fuertes</h3>
+      <h3 data-translate="strong-skills">Habilidades Fuertes</h3>
       <ul>
-        <li>Uso de Android Studio para el desarrollo de aplicaciones móviles</li>
-        <li>Creación de interfaces gráficas intuitivas y funcionales</li>
-        <li>Prueba y depuración de aplicaciones en dispositivos físicos y emuladores</li>
-        <li>Participación en proyectos académicos y personales para reforzar la práctica</li>
+        <li data-translate="skill-1">Uso de Android Studio para el desarrollo de aplicaciones móviles</li>
+        <li data-translate="skill-2">Creación de interfaces gráficas intuitivas y funcionales</li>
+        <li data-translate="skill-3">Prueba y depuración de aplicaciones en dispositivos físicos y emuladores</li>
+        <li data-translate="skill-4">Participación en proyectos académicos y personales para reforzar la práctica</li>
       </ul>
     </div>
 
     <div class="habilidad-columna">
-      <h3>Habilidades Blandas</h3>
+      <h3 data-translate="soft-skills">Habilidades Blandas</h3>
       <ul>
-        <li>Responsable y comprometido con los objetivos</li>
-        <li>Comunicación clara y efectiva</li>
-        <li>Capacidad de análisis y resolución de problemas</li>
-        <li>Colaboración en equipo multidisciplinario</li>
-        <li>Sociabilidad y empatía en el entorno laboral</li>
-        <li>Adaptabilidad frente a nuevos desafíos</li>
+        <li data-translate="soft-skill-1">Responsable y comprometido con los objetivos</li>
+        <li data-translate="soft-skill-2">Comunicación clara y efectiva</li>
+        <li data-translate="soft-skill-3">Capacidad de análisis y resolución de problemas</li>
+        <li data-translate="soft-skill-4">Colaboración en equipo multidisciplinario</li>
+        <li data-translate="soft-skill-5">Sociabilidad y empatía en el entorno laboral</li>
+        <li data-translate="soft-skill-6">Adaptabilidad frente a nuevos desafíos</li>
       </ul>
     </div>
   </div>
 </section>
 
-
-
   <!-- ======= PROYECTOS ======= -->
-  <section id="proyectos" class="section proyectos">
-    <h2>Proyectos</h2>
-    <div class="grid-proyectos">
-  <div class="card">
-    <img src="Adoptaaunamigo.jpeg.jpg" alt="Proyecto 1">
-    <h3>Adopta a un amigo</h3>
-    <p>Página Web para adopción de mascotas.</p>
-    <a href="https://github.com/AlejandroChicas/Progra1-2024/activity" target="_blank" class="btn">
-      Ver Código
-    </a>
-  </div>
-     <div class="card">
-  <img src="Artesania Conchita.jpg" alt="Proyecto 2">
-  <h3>Artesania Conchita</h3>
-  <p>Prototipo.</p>
-  <a href="https://github.com/AlejandroChicas/Proyecto-Artesania-Conchita" target="_blank" class="btn">
-    Ver Código
-  </a>
-</div>
-      <div class="card">
-  <img src="Pagina Wed Artesania Conchita.jpg" alt="Proyecto 3">
-  <h3>Página Web Artesania Conchita</h3>
-  <p>Página Web donde se pueden ver las artesanías.</p>
-  <a href="https://github.com/Vanitas604/Proyecto-Artesanias-Conchita-SitioWeb-Informativo.git" target="_blank" class="btn">
-    Ver Código
-  </a>
-</div>
-      <div class="card">
-  <img src="Task Planner.jpg" alt="Proyecto 4">
-  <h3>Task Planner</h3>
-  <p>Aplicación Android para organizar tareas.</p>
-  <a href="https://github.com/AlejandroChicas/Prograll-Semi-2025/tree/Proyecto_Final" target="_blank" class="btn">
-    Ver Código
-  </a>
-</div>
+<section id="proyectos" class="section proyectos">
+  <h2 data-translate="projects">Proyectos</h2>
+  <div class="grid-proyectos">
+    <div class="card">
+      <img src="Adoptaaunamigo.jpeg.jpg" alt="Proyecto 1">
+      <h3 data-translate="project-1-title">Adopta a un amigo</h3>
+      <p data-translate="project-1-desc">Página Web para adopción de mascotas.</p>
+      <a href="https://github.com/AlejandroChicas/Progra1-2024/activity" target="_blank" class="btn" data-translate="view-code">
+        Ver Código
+      </a>
     </div>
-  </section>
+    <div class="card">
+      <img src="Artesania Conchita.jpg" alt="Proyecto 2">
+      <h3 data-translate="project-2-title">Artesania Conchita</h3>
+      <p data-translate="project-2-desc">Prototipo.</p>
+      <a href="https://github.com/AlejandroChicas/Proyecto-Artesania-Conchita" target="_blank" class="btn" data-translate="view-code">
+        Ver Código
+      </a>
+    </div>
+    <div class="card">
+      <img src="Pagina Wed Artesania Conchita.jpg" alt="Proyecto 3">
+      <h3 data-translate="project-3-title">Página Web Artesania Conchita</h3>
+      <p data-translate="project-3-desc">Página Web donde se pueden ver las artesanías.</p>
+      <a href="https://github.com/Vanitas604/Proyecto-Artesanias-Conchita-SitioWeb-Informativo.git" target="_blank" class="btn" data-translate="view-code">
+        Ver Código
+      </a>
+    </div>
+    <div class="card">
+      <img src="Task Planner.jpg" alt="Proyecto 4">
+      <h3 data-translate="project-4-title">Task Planner</h3>
+      <p data-translate="project-4-desc">Aplicación Android para organizar tareas.</p>
+      <a href="https://github.com/AlejandroChicas/Prograll-Semi-2025/tree/Proyecto_Final" target="_blank" class="btn" data-translate="view-code">
+        Ver Código
+      </a>
+    </div>
+  </div>
+</section>
   
 
 <!-- ======= CONTACTO ======= -->
 <section id="contacto" class="section contacto">
-  <h2>Contacto</h2>
+  <h2 data-translate="contact">Contacto</h2>
 
   <!-- Apartado: Redes con iconos -->
   <div class="redes-contacto">
@@ -157,15 +173,12 @@
 <!-- CDN Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-
-
-
 <!-- Font Awesome para íconos -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 <!-- ======= FOOTER ======= -->
 <footer class="footer">
-  <p>&copy; 2025 Josue Chicas - Todos los derechos reservados</p>
+  <p>&copy; 2025 Josué Chicas - <span data-translate="rights">Todos los derechos reservados</span></p>
 </footer>
 </body>
 </html>
