@@ -493,4 +493,32 @@ header {
   .section {
     padding: 60px 15px;
   }
+  
+  /* ==============================
+   SELECTOR DE IDIOMA EN MARCA PERSONAL
+============================== */
+.marca-personal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  flex-wrap: wrap;
+}
+
+.language-selector-section select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.language-selector-section select:hover {
+  border-color: var(--secondary-color);
+}
+
 }

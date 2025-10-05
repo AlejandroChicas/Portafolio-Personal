@@ -5,6 +5,7 @@ const translations = {
     "nav-home": "Inicio",
     "nav-about": "Sobre mí",
     "nav-projects": "Proyectos",
+    "nav-personal-brand": "Marca Personal",
     "nav-contact": "Contacto",
     "greeting": "Hola, Soy Josué Chicas",
     "interest-areas": "Áreas de interés:",
@@ -36,6 +37,9 @@ const translations = {
     "project-4-title": "Task Planner",
     "project-4-desc": "Aplicación Android para organizar tareas.",
     "view-code": "Ver Código",
+    "personal-brand": "Marca Personal",
+    "brand-title": "Josué Chicas “JCH”",
+    "brand-phrase": "Innovando y creando soluciones móviles y Creando soluciones digitales con pasión para Transformar ideas en experiencias.",
     "contact": "Contacto",
     "rights": "Todos los derechos reservados"
   },
@@ -44,6 +48,7 @@ const translations = {
     "nav-home": "Home",
     "nav-about": "About Me",
     "nav-projects": "Projects",
+    "nav-personal-brand": "Personal Brand",
     "nav-contact": "Contact",
     "greeting": "Hello, I'm Josué Chicas",
     "interest-areas": "Areas of interest:",
@@ -75,6 +80,9 @@ const translations = {
     "project-4-title": "Task Planner",
     "project-4-desc": "Android application to organize tasks.",
     "view-code": "View Code",
+    "personal-brand": "Personal Brand",
+    "brand-title": "Josué Chicas “JCH”",
+    "brand-phrase": "Innovating and creating mobile solutions and digital solutions with passion to transform ideas into experiences.",
     "contact": "Contact",
     "rights": "All rights reserved"
   }
@@ -82,9 +90,11 @@ const translations = {
 
 // Función para cambiar el idioma
 function changeLanguage(lang) {
-  // Actualizar el selector
-  document.getElementById('language-select').value = lang;
-  
+  // Actualizar todos los selectores de idioma
+  document.querySelectorAll('.language-selector select').forEach(select => {
+    select.value = lang;
+  });
+
   // Traducir todos los elementos con data-translate
   const elements = document.querySelectorAll('[data-translate]');
   elements.forEach(element => {
@@ -93,7 +103,7 @@ function changeLanguage(lang) {
       element.textContent = translations[lang][key];
     }
   });
-  
+
   // Guardar preferencia en localStorage
   localStorage.setItem('preferred-language', lang);
 }
@@ -102,37 +112,33 @@ function changeLanguage(lang) {
 function toggleTheme() {
   const currentTheme = document.documentElement.getAttribute('data-theme');
   const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-  
   document.documentElement.setAttribute('data-theme', newTheme);
   localStorage.setItem('preferred-theme', newTheme);
-  
-  // Cambiar el ícono del botón
+
   const themeIcon = document.querySelector('.theme-icon');
   themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
 }
 
 // Inicialización al cargar la página
 document.addEventListener('DOMContentLoaded', function() {
-  // Configurar el selector de idioma
-  const languageSelect = document.getElementById('language-select');
-  languageSelect.addEventListener('change', function() {
-    changeLanguage(this.value);
+  // Configurar los selectores de idioma
+  document.querySelectorAll('.language-selector select').forEach(select => {
+    select.addEventListener('change', function() {
+      changeLanguage(this.value);
+    });
   });
-  
+
   // Configurar el botón de tema
   const themeToggle = document.getElementById('theme-toggle');
   themeToggle.addEventListener('click', toggleTheme);
-  
+
   // Cargar preferencias guardadas
   const savedLanguage = localStorage.getItem('preferred-language') || 'es';
   changeLanguage(savedLanguage);
-  
+
   const savedTheme = localStorage.getItem('preferred-theme') || 'light';
   document.documentElement.setAttribute('data-theme', savedTheme);
-  
-  // Ajustar el ícono del tema según la preferencia guardada
   const themeIcon = document.querySelector('.theme-icon');
   themeIcon.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
-  
 });
 
