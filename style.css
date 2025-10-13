@@ -208,67 +208,115 @@ header {
   color: var(--text-color);
 }
 
+/* ==============================
+   BOTÓN DESCARGAR CV
+============================== */
 .cv-descarga {
   text-align: center;
-  padding: 20px;
+  margin-top: 40px;
 }
 
 .btn-cv {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
   padding: 14px 30px;
-  background: linear-gradient(135deg, var(--secondary-color), var(--text-color));
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  border-radius: 8px;
-  transition: all 0.3s ease;
+  font-size: 1.1rem;
   font-weight: 600;
-  font-size: 1.1em;
-  box-shadow: 0 4px 15px rgba(0, 115, 255, 0.999);
-}
-
-.btn-cv:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 195, 255, 0.4);
-  background: linear-gradient(135deg, var(--text-color), var(--secondary-color));
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px var(--shadow-color);
+  transition: all 0.3s ease;
 }
 
 .btn-cv i {
-  font-size: 1.1em;
+  font-size: 1.2rem;
 }
 
+/* Efecto hover con color representativo */
+.btn-cv:hover {
+  background-color: #007bff; /* Azul profesional (como el título y enlaces) */
+  color: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px var(--shadow-color);
+}
+
+
 /* ==============================
-   SECCIÓN: LENGUAJES DE PROGRAMACIÓN
+   LENGUAJES DE PROGRAMACIÓN
 ============================== */
 .lenguajes {
-  background-color: var(--bg-color);
-  padding: 80px 20px;
-  transition: background-color 0.3s ease;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.lenguajes h2 {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 30px;
+  font-weight: bold;
 }
 
 .skills-grid {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
 
 .skill-btn {
-  background-color: var(--secondary-color);
-  color: white;
-  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
   padding: 12px 25px;
-  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  font-size: 1em;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 3px 8px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
-.skill-btn:hover {
-  background-color: var(--text-color);
-  transform: scale(1.05);
+.skill-btn i {
+  font-size: 1.3rem;
 }
+
+/* ====== Colores por lenguaje ====== */
+.skill-btn.html:hover {
+  background-color: #e44d26; /* Naranja HTML */
+  color: #fff;
+}
+
+.skill-btn.python:hover {
+  background-color: #3572A5; /* Azul Python */
+  color: #fff;
+}
+
+.skill-btn.android:hover {
+  background-color: #3DDC84; /* Verde Android */
+  color: #fff;
+}
+
+.skill-btn.sql:hover {
+  background-color: #00758F; /* Azul SQL */
+  color: #fff;
+}
+
+/* Pequeño efecto al pasar el mouse */
+.skill-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px var(--shadow-color);
+}
+
 
 /* ==============================
    SECCIÓN: HABILIDADES
@@ -389,7 +437,7 @@ header {
 
 .card h3 {
   margin: 10px 0;
-  color: var(--text-color);
+  color: #007bff; /* Color azul del título */
   font-size: 1.2rem;
   font-weight: 700;
 }
@@ -401,29 +449,84 @@ header {
 }
 
 /* ==============================
-   SECCIÓN: CONTACTO
+   ENLACES DENTRO DE LAS TARJETAS
 ============================== */
-.contacto {
-  background-color: var(--bg-color);
-  transition: background-color 0.3s ease;
+.card a {
+  color: #007bff; /* Mismo azul del título */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
+.card a:hover {
+  color: #0056b3; /* Azul más oscuro al pasar el mouse */
+  text-decoration: underline;
+}
+
+
+
+/* ==============================
+   CONTACTO
+============================== */
+.contacto {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.contacto h2 {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Contenedor de iconos */
 .redes-contacto {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 25px;
 }
 
+/* Estilo base para los iconos */
 .logo-contacto {
-  font-size: 2.5em;
+  font-size: 2.2rem;
   color: var(--text-color);
-  transition: transform 0.3s ease, color 0.3s ease;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  padding: 15px;
+  box-shadow: 0 4px 10px var(--shadow-color);
+  transition: all 0.3s ease;
 }
 
-.logo-contacto:hover {
-  color: var(--secondary-color);
-  transform: scale(1.2);
+/* ===== Colores por red social ===== */
+.fa-linkedin:hover {
+  background-color: #0077b5; /* Azul LinkedIn */
+  color: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px var(--shadow-color);
+}
+
+.fa-github:hover {
+  background-color: #24292e; /* Gris oscuro GitHub */
+  color: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px var(--shadow-color);
+}
+
+.fa-facebook:hover {
+  background-color: #1877f2; /* Azul Facebook */
+  color: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px var(--shadow-color);
+}
+
+.fa-envelope:hover {
+  background-color: #d93025; /* Rojo Gmail */
+  color: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px var(--shadow-color);
 }
 
 /* ==============================

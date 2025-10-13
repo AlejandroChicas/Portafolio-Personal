@@ -37,6 +37,7 @@ const translations = {
     "project-4-title": "Task Planner",
     "project-4-desc": "Aplicación Android para organizar tareas.",
     "view-code": "Ver Código",
+    "view-image": "Ver Imagen",  // 🔹 Nueva traducción agregada
     "personal-brand": "Marca Personal",
     "brand-title": "Josué Chicas “JCH”",
     "brand-phrase": "Innovando y creando soluciones móviles y Creando soluciones digitales con pasión para Transformar ideas en experiencias.",
@@ -80,6 +81,7 @@ const translations = {
     "project-4-title": "Task Planner",
     "project-4-desc": "Android application to organize tasks.",
     "view-code": "View Code",
+    "view-image": "View Image",  // 🔹 Nueva traducción agregada
     "personal-brand": "Personal Brand",
     "brand-title": "Josué Chicas “JCH”",
     "brand-phrase": "Innovating and creating mobile solutions and digital solutions with passion to transform ideas into experiences.",
@@ -90,12 +92,10 @@ const translations = {
 
 // Función para cambiar el idioma
 function changeLanguage(lang) {
-  // Actualizar todos los selectores de idioma
   document.querySelectorAll('.language-selector select').forEach(select => {
     select.value = lang;
   });
 
-  // Traducir todos los elementos con data-translate
   const elements = document.querySelectorAll('[data-translate]');
   elements.forEach(element => {
     const key = element.getAttribute('data-translate');
@@ -104,7 +104,6 @@ function changeLanguage(lang) {
     }
   });
 
-  // Guardar preferencia en localStorage
   localStorage.setItem('preferred-language', lang);
 }
 
@@ -121,18 +120,15 @@ function toggleTheme() {
 
 // Inicialización al cargar la página
 document.addEventListener('DOMContentLoaded', function() {
-  // Configurar los selectores de idioma
   document.querySelectorAll('.language-selector select').forEach(select => {
     select.addEventListener('change', function() {
       changeLanguage(this.value);
     });
   });
 
-  // Configurar el botón de tema
   const themeToggle = document.getElementById('theme-toggle');
   themeToggle.addEventListener('click', toggleTheme);
 
-  // Cargar preferencias guardadas
   const savedLanguage = localStorage.getItem('preferred-language') || 'es';
   changeLanguage(savedLanguage);
 
