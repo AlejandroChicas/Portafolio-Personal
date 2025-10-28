@@ -37,10 +37,10 @@ const translations = {
     "project-4-title": "Task Planner",
     "project-4-desc": "Aplicación Android para organizar tareas.",
     "view-code": "Ver Código",
-    "view-image": "Ver Imagen",  // 🔹 Nueva traducción agregada
+    "view-image": "Ver Imagen",
     "personal-brand": "Marca Personal",
     "brand-title": "Josué Chicas “JCH”",
-    "brand-phrase": "Innovando y creando soluciones móviles y Creando soluciones digitales con pasión para Transformar ideas en experiencias.",
+    "brand-phrase": "Corre hacia el futuro donde la tecnología y la humanidad avanzan juntas.",
     "contact": "Contacto",
     "rights": "Todos los derechos reservados"
   },
@@ -81,10 +81,10 @@ const translations = {
     "project-4-title": "Task Planner",
     "project-4-desc": "Android application to organize tasks.",
     "view-code": "View Code",
-    "view-image": "View Image",  // 🔹 Nueva traducción agregada
+    "view-image": "View Image",
     "personal-brand": "Personal Brand",
     "brand-title": "Josué Chicas “JCH”",
-    "brand-phrase": "Innovating and creating mobile solutions and digital solutions with passion to transform ideas into experiences.",
+    "brand-phrase": "Race into the future where technology and humanity advance together.",
     "contact": "Contact",
     "rights": "All rights reserved"
   }
@@ -100,7 +100,12 @@ function changeLanguage(lang) {
   elements.forEach(element => {
     const key = element.getAttribute('data-translate');
     if (translations[lang][key]) {
-      element.textContent = translations[lang][key];
+      // Usamos innerHTML solo si contiene etiquetas HTML
+      if (translations[lang][key].includes("<") || translations[lang][key].includes("&")) {
+        element.innerHTML = translations[lang][key];
+      } else {
+        element.textContent = translations[lang][key];
+      }
     }
   });
 
@@ -137,4 +142,3 @@ document.addEventListener('DOMContentLoaded', function() {
   const themeIcon = document.querySelector('.theme-icon');
   themeIcon.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
 });
-
