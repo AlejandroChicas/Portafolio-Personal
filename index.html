@@ -9,15 +9,21 @@
 </head>
 <body>
 
-<!-- ======= NAVBAR ======= -->
+  <!-- ======= NAVBAR ======= -->
 <header>
   <nav class="navbar">
-    <h1 class="logo" data-translate="portfolio-title">Mi Portafolio Personal</h1>
+    <div class="logo-container">
+      <img src="Logodeesloga.jpg" alt="Logo del portafolio" class="logo-img">
+      <h1 class="logo" data-translate="portfolio-title">Mi Portafolio Personal</h1>
+    </div>
     <ul class="nav-links">
       <li><a href="#inicio" class="btn-nav" data-translate="nav-home">Inicio</a></li>
       <li><a href="#sobre-mi" class="btn-nav" data-translate="nav-about">Sobre mí</a></li>
       <li><a href="#proyectos" class="btn-nav" data-translate="nav-projects">Proyectos</a></li>
       <li><a href="#marca-personal" class="btn-nav" data-translate="nav-personal-brand">Marca Personal</a></li>
+      <li><a href="#testimonios" class="btn-nav" data-translate="nav-testimonials">Testimonios</a></li>
+      <li><a href="#intereses" class="btn-nav" data-translate="nav-interests">Intereses</a></li>
+      <li><a href="#publicaciones" class="btn-nav" data-translate="nav-publications">Publicaciones</a></li>
       <li><a href="#contacto" class="btn-nav" data-translate="nav-contact">Contacto</a></li>
     </ul>
     <div class="navbar-controls">
@@ -36,7 +42,7 @@
   </nav>
 </header>
 
-  <!-- ======= INICIO ======= -->
+<!-- ======= INICIO ======= -->
 <section id="inicio" class="section inicio">
   <div class="contenido">
     <h2 data-translate="greeting">Hola, Soy Josué Chicas</h2>
@@ -44,10 +50,10 @@
   <div class="foto-perfil">
     <img src="IMG_3524.JPG" alt="Foto de perfil">
   </div>
-  <p><h2 data-translate="interest-areas">Rol:</h2><span data-translate="mobile-dev">Diseñador UI/UX</span></p>
+  <p><h2 data-translate="interest-areas">Rol:</h2><span data-translate="mobile-dev">Front End</span></p>
 </section>
 
-  <!-- ======= SOBRE MÍ ======= -->
+<!-- ======= SOBRE MÍ ======= -->
 <section id="sobre-mi" class="section sobre-mi">
   <div class="sobre-mi-contenedor">
     <div class="sobre-mi-contenido">
@@ -65,14 +71,13 @@
     </div>
     
     <div class="cv-descarga">
-  <a href="Currículum Vitae Cv  (2).pdf" target="_blank" download class="btn btn-cv" data-translate="download-cv">
-    <i class="fas fa-download"></i> Descargar CV
-  </a>
-</div>
+      <a href="Currículum Vitae Cv  (2).pdf" target="_blank" download class="btn btn-cv" data-translate="download-cv">
+        <i class="fas fa-download"></i> Descargar CV
+      </a>
+    </div>
 
-<!-- Asegúrate de tener Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </div>
 </section>
 
@@ -80,41 +85,18 @@
 <section id="lenguajes" class="section lenguajes">
   <h2 data-translate="programming-languages">Lenguajes de Programación Desarrollados</h2>
   <div class="skills-grid">
-    <button class="skill-btn html">
-      <i class="fa-brands fa-html5"></i> Visual Studio Code: HTML
-    </button>
-
-    <button class="skill-btn python">
-      <i class="fa-brands fa-python"></i> PyCharm: Python
-    </button>
-
-    <button class="skill-btn android">
-      <i class="fa-brands fa-android"></i> Android Studio: Java
-    </button>
-
-    <button class="skill-btn sql">
-      <i class="fa-solid fa-database"></i> SQL Server
-    </button>
-
-    <button class="skill-btn postgresql">
-      <i class="fa-solid fa-database"></i> PostgreSQL
-    </button>
-
-    <button class="skill-btn mariadb">
-      <i class="fa-solid fa-water"></i> MariaDB
-    </button>
+    <button class="skill-btn html"><i class="fa-brands fa-html5"></i> Visual Studio Code: HTML</button>
+    <button class="skill-btn python"><i class="fa-brands fa-python"></i> PyCharm: Python</button>
+    <button class="skill-btn android"><i class="fa-brands fa-android"></i> Android Studio: Java</button>
+    <button class="skill-btn sql"><i class="fa-solid fa-database"></i> SQL Server</button>
+    <button class="skill-btn postgresql"><i class="fa-solid fa-database"></i> PostgreSQL</button>
+    <button class="skill-btn mariadb"><i class="fa-solid fa-water"></i> MariaDB</button>
   </div>
 </section>
 
-
-<!-- Font Awesome (necesario para los íconos) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-
-  <!-- ======= HABILIDADES ======= -->
+<!-- ======= HABILIDADES ======= -->
 <section class="habilidades" id="habilidades">
   <h2 data-translate="skills">Habilidades</h2>
-
   <div class="habilidades-contenedor">
     <div class="habilidad-columna">
       <h3 data-translate="strong-skills">Habilidades Fuertes</h3>
@@ -140,7 +122,7 @@
   </div>
 </section>
 
- <!-- ======= PROYECTOS ======= -->
+<!-- ======= PROYECTOS ======= -->
 <section id="proyectos" class="section proyectos">
   <h2 data-translate="projects">Proyectos</h2>
   <div class="grid-proyectos">
@@ -148,48 +130,32 @@
       <img src="Adoptaaunamigo.jpeg.jpg" alt="Proyecto 1">
       <h3 data-translate="project-1-title">Adopta a un amigo</h3>
       <p data-translate="project-1-desc">Página Web para adopción de mascotas.</p>
-      <a href="https://github.com/AlejandroChicas/Progra1-2024/activity" target="_blank" class="btn" data-translate="view-code">
-        Ver Código
-      </a>
-      <a href="Imagen de WhatsApp 2025-10-10 a las 14.48.32_4e29d7b2.jpg" target="_blank" class="btn" data-translate="view-image">
-        Ver Imagen
-      </a>
+      <a href="https://github.com/AlejandroChicas/Progra1-2024/activity" target="_blank" class="btn" data-translate="view-code">Ver Código</a>
+      <a href="Imagen de WhatsApp 2025-10-10 a las 14.48.32_4e29d7b2.jpg" target="_blank" class="btn" data-translate="view-image">Ver Imagen</a>
     </div>
 
     <div class="card">
       <img src="Artesania Conchita.jpg" alt="Proyecto 2">
       <h3 data-translate="project-2-title">Artesania Conchita</h3>
       <p data-translate="project-2-desc">Prototipo.(Programador)</p>
-      <a href="https://github.com/AlejandroChicas/Proyecto-Artesania-Conchita" target="_blank" class="btn" data-translate="view-code">
-        Ver Código
-      </a>
-      <a href="Prototipo.jpg" target="_blank" class="btn" data-translate="view-image">
-        Ver Imagen
-      </a>
+      <a href="https://github.com/AlejandroChicas/Proyecto-Artesania-Conchita" target="_blank" class="btn" data-translate="view-code">Ver Código</a>
+      <a href="Prototipo.jpg" target="_blank" class="btn" data-translate="view-image">Ver Imagen</a>
     </div>
 
     <div class="card">
       <img src="Pagina Wed Artesania Conchita.jpg" alt="Proyecto 3">
       <h3 data-translate="project-3-title">Página Web Artesania Conchita</h3>
       <p data-translate="project-3-desc">Página Web donde se pueden ver las artesanías.</p>
-      <a href="https://github.com/Vanitas604/Proyecto-Artesanias-Conchita-SitioWeb-Informativo.git" target="_blank" class="btn" data-translate="view-code">
-        Ver Código
-      </a>
-      <a href="Pagina Wed Conchita.jpg" target="_blank" class="btn" data-translate="view-image">
-        Ver Imagen
-      </a>
+      <a href="https://github.com/Vanitas604/Proyecto-Artesanias-Conchita-SitioWeb-Informativo.git" target="_blank" class="btn" data-translate="view-code">Ver Código</a>
+      <a href="Pagina Wed Conchita.jpg" target="_blank" class="btn" data-translate="view-image">Ver Imagen</a>
     </div>
 
     <div class="card">
       <img src="Task Palnner2.jpg" alt="Proyecto 4">
       <h3 data-translate="project-4-title">Task Planner</h3>
       <p data-translate="project-4-desc">Aplicación Android para organizar tareas.(Programador)</p>
-      <a href="https://github.com/AlejandroChicas/Prograll-Semi-2025/tree/Proyecto_Final" target="_blank" class="btn" data-translate="view-code">
-        Ver Código
-      </a>
-      <a href="TasPlanet.jpg" target="_blank" class="btn" data-translate="view-image">
-        Ver Imagen
-      </a>
+      <a href="https://github.com/AlejandroChicas/Prograll-Semi-2025/tree/Proyecto_Final" target="_blank" class="btn" data-translate="view-code">Ver Código</a>
+      <a href="TasPlanet.jpg" target="_blank" class="btn" data-translate="view-image">Ver Imagen</a>
     </div>
   </div>
 </section>
@@ -198,64 +164,79 @@
 <section id="marca-personal" class="section marca-personal">
   <div class="marca-personal-header">
     <h2 data-translate="personal-brand">Marca Personal</h2>
-    <div class="language-selector-section"></div>
   </div>
-
   <div class="grid-proyectos">
     <div class="card">
       <img src="Logodeesloga.jpg" alt="Logo Personal">
       <h3 data-translate="brand-title">Josué Chicas “JCH”</h3>
-      <p data-translate="brand-phrase">
-        “Corre hacia el futuro: donde la tecnología y la humanidad avanzan juntas.”
-”.
-      </p>
+      <p data-translate="brand-phrase">“Corre hacia el futuro: donde la tecnología y la humanidad avanzan juntas.”</p>
     </div>
   </div>
 </section>
 
-<!-- ======= CONTACTO ======= --> 
-<section id="contacto" class="section contacto">   
-  <h2 data-translate="contact">Contacto</h2>    
-
-  <!-- Apartado: Redes con iconos -->   
-  <div class="redes-contacto">     
-    <p>
-      <a href="https://www.linkedin.com/in/josue-alejandro-chicas-mejia-3a478b291/" target="_blank" rel="noopener">
-        <i class="fab fa-linkedin logo-contacto"></i>
-      </a>
-    </p>
-    <p>
-      <a href="https://github.com/AlejandroChicas" target="_blank" rel="noopener">
-        <i class="fab fa-github logo-contacto"></i>
-      </a>
-    </p>
-    <p>
-      <a href="https://www.facebook.com/josue.chicass.90" target="_blank" rel="noopener">
-        <i class="fab fa-facebook logo-contacto"></i>
-      </a>
-    </p>
-    <p>
-      <a href="mailto:alejandrochicas@gmail.com" target="_blank" rel="noopener">
-        <i class="fas fa-envelope logo-contacto"></i>
-      </a>
-    </p>
-  </div> 
+<!-- ======= TESTIMONIOS ======= -->
+<section id="testimonios" class="section testimonios">
+  <h2 data-translate="testimonials">Testimonios</h2>
+  <div class="grid-proyectos">
+    <div class="card">
+      <p data-translate="testimonial-1">“Josué es un profesional dedicado, con gran capacidad técnica y liderazgo.”</p>
+      <h4 data-translate="testimonial-1-author">- Docente, Universidad</h4>
+    </div>
+    <div class="card">
+      <p data-translate="testimonial-2">“Trabajar con Josué fue una excelente experiencia, siempre proactivo y enfocado.”</p>
+      <h4 data-translate="testimonial-2-author">- Compañero de proyecto</h4>
+    </div>
+  </div>
 </section>
 
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- ======= INTERESES ======= -->
+<section id="intereses" class="section intereses">
+  <h2 data-translate="interests">Intereses</h2>
+  <p data-translate="interests-text">
+    Me apasiona la programación, el desarrollo web, la tecnología móvil y la inteligencia artificial. 
+    También disfruto aprender sobre innovación tecnológica, diseño UX/UI y desarrollo sostenible.
+  </p>
+</section>
 
 
+<!-- ======= PUBLICACIONES ======= -->
+<section id="publicaciones" class="section publicaciones">
+  <h2 data-translate="publications">Publicaciones</h2>
+  <div class="grid-proyectos">
+    <div class="card">
+      <h3 data-translate="pub-1-title">Cómo desarrollar aplicaciones Android modernas</h3>
+      <p data-translate="pub-1-desc">Artículo sobre buenas prácticas en Android Studio.</p>
+      <a href="#" target="_blank" class="btn" data-translate="pub-1-link">Leer más</a>
+    </div>
+    <div class="card">
+      <h3 data-translate="pub-2-title">El impacto del software libre en la educación</h3>
+      <p data-translate="pub-2-desc">Reflexión sobre el uso de herramientas abiertas en el aprendizaje.</p>
+      <a href="#" target="_blank" class="btn" data-translate="pub-2-link">Leer más</a>
+    </div>
+  </div>
+</section>
 
-<!-- CDN Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-<!-- Font Awesome para íconos -->
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!-- ======= CONTACTO ======= -->
+<section id="contacto" class="section contacto">
+  <h2 data-translate="contact">Contacto</h2>
+  <div class="redes-contacto">
+    <p><a href="https://www.linkedin.com/in/josue-alejandro-chicas-mejia-3a478b291/" target="_blank"><i class="fab fa-linkedin logo-contacto"></i></a></p>
+    <p><a href="https://github.com/AlejandroChicas" target="_blank"><i class="fab fa-github logo-contacto"></i></a></p>
+    <p><a href="https://www.facebook.com/josue.chicass.90" target="_blank"><i class="fab fa-facebook logo-contacto"></i></a></p>
+    <p><a href="mailto:alejandrochicas@gmail.com" target="_blank"><i class="fas fa-envelope logo-contacto"></i></a></p>
+  </div>
+</section>
 
 <!-- ======= FOOTER ======= -->
 <footer class="footer">
   <p>&copy; 2025 Josué Chicas - <span data-translate="rights">Todos los derechos reservados</span></p>
 </footer>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
+

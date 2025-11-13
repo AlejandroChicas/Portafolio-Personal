@@ -129,6 +129,33 @@ header {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+ /* ===== ESTILOS PARA ALINEAR LOGO E IMAGEN ===== */
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre la imagen y el texto */
+  }
+
+  .logo-img {
+    width: 50px;  /* Tamaño del logo */
+    height: 50px;
+    border-radius: 50%; /* Opcional: hace la imagen circular */
+    object-fit: cover;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  /* (Opcional) Asegura que la navbar esté bien distribuida */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+  }
+  
 /* ==============================
    SECCIÓN: INICIO
 ============================== */
