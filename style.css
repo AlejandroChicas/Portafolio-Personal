@@ -11,7 +11,6 @@
   --navbar-bg: #0078FF;
   --footer-bg: #0078FF;
 }
-
 [data-theme="dark"] {
   --bg-color: #121212;
   --text-color: #e0e0e0;
@@ -22,7 +21,6 @@
   --navbar-bg: #1a1a1a;
   --footer-bg: #1a1a1a;
 }
-
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -32,25 +30,21 @@ body {
   scroll-behavior: smooth;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 .section {
   padding: 80px 20px;
   text-align: center;
   background-color: var(--bg-color);
 }
-
 h2 {
   font-size: 2.2em;
   color: var(--text-color);
   margin-bottom: 20px;
 }
-
 p {
   font-size: 1.1em;
   line-height: 1.6;
   color: var(--text-color);
 }
-
 /* ==============================
    NAVBAR
 ============================== */
@@ -63,43 +57,36 @@ header {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease;
 }
-
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
 }
-
 .logo {
   font-size: 1.5em;
   font-weight: bold;
   color: white;
 }
-
 .nav-links {
   list-style: none;
   display: flex;
   gap: 25px;
 }
-
 .nav-links li a {
   text-decoration: none;
   color: #fff;
   font-weight: 500;
   transition: color 0.3s ease;
 }
-
 .nav-links li a:hover {
   color: var(--secondary-color);
 }
-
 .navbar-controls {
   display: flex;
   align-items: center;
   gap: 15px;
 }
-
 .language-selector select {
   padding: 8px 12px;
   border-radius: 6px;
@@ -109,7 +96,6 @@ header {
   font-size: 0.9em;
   cursor: pointer;
 }
-
 .theme-toggle .theme-btn {
   background: none;
   border: none;
@@ -124,7 +110,6 @@ header {
   justify-content: center;
   transition: background-color 0.3s ease;
 }
-
 .theme-toggle .theme-btn:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
@@ -155,7 +140,7 @@ header {
     align-items: center;
     padding: 15px 40px;
   }
-  
+
 /* ==============================
    SECCIÓN: INICIO
 ============================== */
@@ -168,17 +153,14 @@ header {
   padding: 100px 20px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 .inicio h2 {
   font-size: 2.5em;
   margin-bottom: 10px;
   color: var(--text-color);
 }
-
 .inicio h3 {
   color: var(--text-color);
 }
-
 /* ====== FOTO DE PERFIL ====== */
 .foto-perfil img {
   width: 350px;
@@ -189,7 +171,6 @@ header {
   object-fit: cover;
   box-shadow: 0 4px 5px var(--shadow-color);
 }
-
 /* ==============================
    SECCIÓN: SOBRE MÍ - FONDO UNIFICADO
 ============================== */
@@ -204,7 +185,6 @@ header {
   flex-direction: column;
   gap: 40px;
 }
-
 .sobre-mi-contenedor {
   max-width: 900px;
   margin: 0 auto;
@@ -212,7 +192,6 @@ header {
   flex-direction: column;
   gap: 40px;
 }
-
 .sobre-mi-contenido {
   background-color: var(--card-bg);
   padding: 40px;
@@ -221,12 +200,10 @@ header {
   border: 1px solid var(--border-color);
   transition: all 0.3s ease;
 }
-
 .sobre-mi-contenido:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 30px var(--shadow-color);
 }
-
 .texto-sobre-mi p {
   text-align: justify;
   margin-bottom: 0;
@@ -234,7 +211,6 @@ header {
   font-size: 1.1em;
   color: var(--text-color);
 }
-
 /* ==============================
    BOTÓN DESCARGAR CV
 ============================== */
@@ -242,7 +218,6 @@ header {
   text-align: center;
   margin-top: 40px;
 }
-
 .btn-cv {
   display: inline-flex;
   align-items: center;
@@ -262,11 +237,9 @@ header {
   position: relative;
   overflow: hidden;
 }
-
 .btn-cv i {
   font-size: 1.2rem;
 }
-
 /* Efecto hover con animación */
 .btn-cv:hover {
   background-color: #007bff; /* Azul profesional */
@@ -275,7 +248,6 @@ header {
   box-shadow: 0 6px 15px rgba(0, 123, 255, 0.5);
   filter: brightness(1.15);
 }
-
 /* Efecto de brillo animado (pasa por encima del botón) */
 .btn-cv::after {
   content: "";
@@ -288,13 +260,9 @@ header {
   transform: skewX(-25deg);
   transition: 0.5s;
 }
-
 .btn-cv:hover::after {
   left: 120%;
 }
-
-
-
 /* ==============================
    LENGUAJES DE PROGRAMACIÓN
 ============================== */
@@ -302,21 +270,18 @@ header {
   text-align: center;
   padding: 60px 20px;
 }
-
 .lenguajes h2 {
   font-size: 2rem;
   color: var(--text-color);
   margin-bottom: 30px;
   font-weight: bold;
 }
-
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
-
 .skill-btn {
   display: flex;
   align-items: center;
@@ -333,11 +298,9 @@ header {
   box-shadow: 0 3px 8px var(--shadow-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
-
 .skill-btn i {
   font-size: 1.3rem;
 }
-
 /* ====== Colores por lenguaje ====== */
 /* Contenedor general */
 .skills-grid {
@@ -347,7 +310,6 @@ header {
   justify-content: center;
   padding: 20px;
 }
-
 /* Botones base */
 .skill-btn {
   border: none;
@@ -362,44 +324,34 @@ header {
   align-items: center;
   gap: 8px;
 }
-
 /* Colores específicos */
 .skill-btn.html {
   background-color: #e34c26;
 }
-
 .skill-btn.python {
   background-color: #3776ab;
 }
-
 .skill-btn.android {
   background-color: #3ddc84;
 }
-
 .skill-btn.sql {
   background-color: #f29111;
 }
-
 .skill-btn.postgresql {
   background-color: #336791; /* Azul PostgreSQL */
 }
-
 .skill-btn.mariadb {
   background-color: #1f305f; /* Azul oficial de MariaDB */
 }
-
 /* Animación hover */
 .skill-btn:hover {
   transform: scale(1.08);
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
   filter: brightness(1.15);
 }
-
-
 /* ==============================
    SECCIÓN: HABILIDADES
 ============================== */
-
 /* 1. SECCIÓN PRINCIPAL */
 .habilidades {
   background-color: var(--bg-color);
@@ -407,14 +359,12 @@ header {
   text-align: center;
   transition: background-color 0.3s ease;
 }
-
 /* 2. TÍTULO DE LA SECCIÓN */
 .habilidades h2 {
   color: var(--text-color);
   font-size: 2.2rem;
   margin-bottom: 40px;
 }
-
 /* 3. CONTENEDOR DE LAS CARTAS */
 .habilidades-contenedor {
   display: grid;
@@ -425,7 +375,6 @@ header {
   max-width: 1000px;
   margin: 0 auto;
 }
-
 /* 4. ESTILOS DE LA CARTA INDIVIDUAL */
 .habilidad-columna {
   background-color: var(--card-bg);
@@ -436,20 +385,17 @@ header {
   border: 1px solid var(--border-color);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
-
 /* 5. TÍTULO DE LA CARTA */
 .habilidad-columna h3 {
   color: var(--text-color);
   margin-bottom: 25px;
 }
-
 /* 6. LISTA DE HABILIDADES */
 .habilidad-columna ul {
   list-style: none;
   padding: 0;
   text-align: left;
 }
-
 .habilidad-columna li {
   margin: 10px 0;
   padding-left: 25px;
@@ -457,7 +403,6 @@ header {
   color: var(--text-color);
   font-weight: 500;
 }
-
 .habilidad-columna li::before {
   content: "✔";
   color: var(--secondary-color);
@@ -474,14 +419,12 @@ header {
   text-align: center;
   transition: background-color 0.3s ease;
 }
-
 .proyectos h2 {
   color: var(--text-color);
   font-size: 2.5rem;
   margin-bottom: 40px;
   font-weight: bold;
 }
-
 .grid-proyectos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -490,7 +433,6 @@ header {
   margin: 0 auto;
   align-items: start;
 }
-
 .card {
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
@@ -499,12 +441,10 @@ header {
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
-
 .card:hover {
   transform: translateY(-8px);
   box-shadow: 0 8px 20px var(--shadow-color);
 }
-
 .card img {
   width: 100%;
   height: 180px;
@@ -512,20 +452,17 @@ header {
   object-fit: contain;
   margin-bottom: 15px;
 }
-
 .card h3 {
   margin: 10px 0;
   color: #007bff; /* Color azul del título */
   font-size: 1.2rem;
   font-weight: 700;
 }
-
 .card p {
   color: var(--text-color);
   font-size: 0.95rem;
   line-height: 1.4;
 }
-
 /* ==============================
    ENLACES DENTRO DE LAS TARJETAS
 ============================== */
@@ -535,14 +472,10 @@ header {
   font-weight: 500;
   transition: color 0.3s ease;
 }
-
 .card a:hover {
   color: #0056b3; /* Azul más oscuro al pasar el mouse */
   text-decoration: underline;
 }
-
-
-
 /* ==============================
    CONTACTO
 ============================== */
@@ -550,14 +483,12 @@ header {
   text-align: center;
   padding: 60px 20px;
 }
-
 .contacto h2 {
   font-size: 2rem;
   color: var(--text-color);
   margin-bottom: 30px;
   font-weight: bold;
 }
-
 /* Contenedor de iconos */
 .redes-contacto {
   display: flex;
@@ -565,7 +496,6 @@ header {
   flex-wrap: wrap;
   gap: 25px;
 }
-
 /* Estilo base para los iconos */
 .logo-contacto {
   font-size: 2.2rem;
@@ -577,7 +507,6 @@ header {
   box-shadow: 0 4px 10px var(--shadow-color);
   transition: all 0.3s ease;
 }
-
 /* ===== Colores por red social ===== */
 .fa-linkedin:hover {
   background-color: #0077b5; /* Azul LinkedIn */
@@ -585,28 +514,24 @@ header {
   transform: translateY(-5px);
   box-shadow: 0 6px 15px var(--shadow-color);
 }
-
 .fa-github:hover {
   background-color: #24292e; /* Gris oscuro GitHub */
   color: #fff;
   transform: translateY(-5px);
   box-shadow: 0 6px 15px var(--shadow-color);
 }
-
 .fa-facebook:hover {
   background-color: #1877f2; /* Azul Facebook */
   color: #fff;
   transform: translateY(-5px);
   box-shadow: 0 6px 15px var(--shadow-color);
 }
-
 .fa-envelope:hover {
   background-color: #d93025; /* Rojo Gmail */
   color: #fff;
   transform: translateY(-5px);
   box-shadow: 0 6px 15px var(--shadow-color);
 }
-
 /* ==============================
    FOOTER
 ============================== */
@@ -618,13 +543,11 @@ header {
   font-size: 0.9em;
   transition: background-color 0.3s ease;
 }
-
 .footer p {
   margin: 0;
   letter-spacing: 0.5px;
   color: white;
 }
-
 /* ==============================
    RESPONSIVE
 ============================== */
@@ -686,7 +609,6 @@ header {
   margin: 0 auto 40px auto;
   flex-wrap: wrap;
 }
-
 .language-selector-section select {
   padding: 8px 12px;
   border-radius: 6px;
@@ -697,9 +619,190 @@ header {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
 .language-selector-section select:hover {
   border-color: var(--secondary-color);
 }
 
+/* Contenedor tipo grid */
+.intereses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* Tarjeta idéntica a publicaciones */
+.interes-card {
+  background: #111;
+  padding: 20px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  transition: transform .3s, box-shadow .3s;
+}
+
+.interes-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
+}
+
+/* Imagen */
+.interes-img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background: #000;
+}
+
+/* Título azul como en tu ejemplo */
+.interes-titulo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1c7dff;
+  margin-top: 10px;
+}
+
+/* Descripción */
+.interes-desc {
+  color: #ccc;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+
+.testimonio-img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  display: block;
+  border: 3px solid #ddd;
+}
+
+/* Ajustes de Formulario de Contactos*/
+/* ================================
+   ESTILOS RESPONSIVE
+================================ */
+
+/* GENERAL */
+section {
+  padding: 40px 20px;
+}
+
+/* NAVBAR — Versión escritorio */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  flex-wrap: wrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* ==========================================
+   ⬇️ DISEÑO RESPONSIVE PARA MÓVILES
+========================================== */
+@media (max-width: 850px) {
+
+  /* NAVBAR EN MÓVIL */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-container {
+    width: 100%;
+    margin: 0;
+  }
+
+  #search-input {
+    width: 90%;
+  }
+
+  /* INICIO */
+  #inicio .contenido h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .foto-perfil img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+  }
+
+  /* GRID DE PROYECTOS */
+  .grid-proyectos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* DIPLOMAS */
+  .pub-img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* INTERESES */
+  .intereses-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* HABILIDADES */
+  .habilidades-contenedor {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* ==========================================
+   ⬇️ RESPONSIVE PARA TABLETS
+========================================== */
+@media (max-width: 1100px) and (min-width: 851px) {
+  .grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .intereses-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 }

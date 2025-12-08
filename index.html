@@ -6,7 +6,31 @@
   <title>Portafolio de Josue Chicas | Josue Chicas</title>
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
+
+  <style>
+    /* ====== BARRA DE BÚSQUEDA ====== */
+    .search-container {
+      position: relative;
+      margin-left: 20px;
+    }
+
+    #search-input {
+      padding: 8px 35px 8px 10px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      outline: none;
+      font-size: 14px;
+    }
+
+    .search-icon {
+      position: absolute;
+      right: 10px;
+      top: 8px;
+      color: #666;
+    }
+  </style>
 </head>
+
 <body>
 
   <!-- ======= NAVBAR ======= -->
@@ -16,16 +40,18 @@
       <img src="Logodeesloga.jpg" alt="Logo del portafolio" class="logo-img">
       <h1 class="logo" data-translate="portfolio-title">Mi Portafolio Personal</h1>
     </div>
+
     <ul class="nav-links">
       <li><a href="#inicio" class="btn-nav" data-translate="nav-home">Inicio</a></li>
       <li><a href="#sobre-mi" class="btn-nav" data-translate="nav-about">Sobre mí</a></li>
       <li><a href="#proyectos" class="btn-nav" data-translate="nav-projects">Proyectos</a></li>
       <li><a href="#marca-personal" class="btn-nav" data-translate="nav-personal-brand">Marca Personal</a></li>
-      <li><a href="#testimonios" class="btn-nav" data-translate="nav-testimonials">Testimonios</a></li>
+      <li><a href="#reseñas" class="btn-nav" data-translate="nav-testimonials">Testimonios</a></li>
       <li><a href="#intereses" class="btn-nav" data-translate="nav-interests">Intereses</a></li>
-      <li><a href="#publicaciones" class="btn-nav" data-translate="nav-publications">Publicaciones</a></li>
+      <li><a href="#diplomas" class="btn-nav" data-translate="nav-diplomas">Diplomas</a></li>
       <li><a href="#contacto" class="btn-nav" data-translate="nav-contact">Contacto</a></li>
     </ul>
+
     <div class="navbar-controls">
       <div class="language-selector">
         <select id="language-select">
@@ -33,14 +59,24 @@
           <option value="en">English</option>
         </select>
       </div>
+
       <div class="theme-toggle">
         <button id="theme-toggle" class="theme-btn">
           <span class="theme-icon">🌙</span>
         </button>
       </div>
     </div>
+
+    <!-- ====== BARRA DE BÚSQUEDA INSERTADA ====== -->
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Buscar..." />
+      <i class="fas fa-search search-icon"></i>
+    </div>
+
   </nav>
 </header>
+
+
 
 <!-- ======= INICIO ======= -->
 <section id="inicio" class="section inicio">
@@ -52,6 +88,8 @@
   </div>
   <p><h2 data-translate="interest-areas">Rol:</h2><span data-translate="mobile-dev">Front End</span></p>
 </section>
+
+
 
 <!-- ======= SOBRE MÍ ======= -->
 <section id="sobre-mi" class="section sobre-mi">
@@ -69,17 +107,18 @@
         </p>
       </div>
     </div>
-    
+
     <div class="cv-descarga">
-      <a href="Currículum Vitae Cv  (2).pdf" target="_blank" download class="btn btn-cv" data-translate="download-cv">
+      <a href="Currículum Vitae Cv  (3).pdf" target="_blank" download class="btn btn-cv" data-translate="download-cv">
         <i class="fas fa-download"></i> Descargar CV
       </a>
     </div>
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </div>
 </section>
+
+
 
 <!-- ======= LENGUAJES DE PROGRAMACIÓN ======= -->
 <section id="lenguajes" class="section lenguajes">
@@ -94,6 +133,8 @@
   </div>
 </section>
 
+
+
 <!-- ======= HABILIDADES ======= -->
 <section class="habilidades" id="habilidades">
   <h2 data-translate="skills">Habilidades</h2>
@@ -107,7 +148,6 @@
         <li data-translate="skill-4">Participación en proyectos académicos y personales para reforzar la práctica</li>
       </ul>
     </div>
-
     <div class="habilidad-columna">
       <h3 data-translate="soft-skills">Habilidades Blandas</h3>
       <ul>
@@ -122,14 +162,17 @@
   </div>
 </section>
 
+
+
 <!-- ======= PROYECTOS ======= -->
 <section id="proyectos" class="section proyectos">
   <h2 data-translate="projects">Proyectos</h2>
   <div class="grid-proyectos">
+
     <div class="card">
       <img src="Adoptaaunamigo.jpeg.jpg" alt="Proyecto 1">
       <h3 data-translate="project-1-title">Adopta a un amigo</h3>
-      <p data-translate="project-1-desc">Página Web para adopción de mascotas.</p>
+      <p data-translate="project-1-desc">Página Web para adopción de mascotas (Rol: Diseñador UI/UX)</p>
       <a href="https://github.com/AlejandroChicas/Progra1-2024/activity" target="_blank" class="btn" data-translate="view-code">Ver Código</a>
       <a href="Imagen de WhatsApp 2025-10-10 a las 14.48.32_4e29d7b2.jpg" target="_blank" class="btn" data-translate="view-image">Ver Imagen</a>
     </div>
@@ -137,7 +180,7 @@
     <div class="card">
       <img src="Artesania Conchita.jpg" alt="Proyecto 2">
       <h3 data-translate="project-2-title">Artesania Conchita</h3>
-      <p data-translate="project-2-desc">Prototipo.(Programador)</p>
+      <p data-translate="project-2-desc">Prototipo (Rol: Programador)</p>
       <a href="https://github.com/AlejandroChicas/Proyecto-Artesania-Conchita" target="_blank" class="btn" data-translate="view-code">Ver Código</a>
       <a href="Prototipo.jpg" target="_blank" class="btn" data-translate="view-image">Ver Imagen</a>
     </div>
@@ -145,7 +188,7 @@
     <div class="card">
       <img src="Pagina Wed Artesania Conchita.jpg" alt="Proyecto 3">
       <h3 data-translate="project-3-title">Página Web Artesania Conchita</h3>
-      <p data-translate="project-3-desc">Página Web donde se pueden ver las artesanías.</p>
+      <p data-translate="project-3-desc">Página Web donde se pueden ver las artesanías (Rol: Diseñador UI/UX)</p>
       <a href="https://github.com/Vanitas604/Proyecto-Artesanias-Conchita-SitioWeb-Informativo.git" target="_blank" class="btn" data-translate="view-code">Ver Código</a>
       <a href="Pagina Wed Conchita.jpg" target="_blank" class="btn" data-translate="view-image">Ver Imagen</a>
     </div>
@@ -153,12 +196,15 @@
     <div class="card">
       <img src="Task Palnner2.jpg" alt="Proyecto 4">
       <h3 data-translate="project-4-title">Task Planner</h3>
-      <p data-translate="project-4-desc">Aplicación Android para organizar tareas.(Programador)</p>
+      <p data-translate="project-4-desc">Aplicación Android para organizar tareas (Rol: Diseñador UI/UX)</p>
       <a href="https://github.com/AlejandroChicas/Prograll-Semi-2025/tree/Proyecto_Final" target="_blank" class="btn" data-translate="view-code">Ver Código</a>
       <a href="TasPlanet.jpg" target="_blank" class="btn" data-translate="view-image">Ver Imagen</a>
     </div>
+
   </div>
 </section>
+
+
 
 <!-- ======= MARCA PERSONAL ======= -->
 <section id="marca-personal" class="section marca-personal">
@@ -168,54 +214,127 @@
   <div class="grid-proyectos">
     <div class="card">
       <img src="Logodeesloga.jpg" alt="Logo Personal">
-      <h3 data-translate="brand-title">Josué Chicas “JCH”</h3>
-      <p data-translate="brand-phrase">“Corre hacia el futuro: donde la tecnología y la humanidad avanzan juntas.”</p>
+      <h3 data-translate="brand-title">Josué Chicas "JCH"</h3>
+      <p data-translate="brand-phrase">"Corre hacia el futuro: donde la tecnología y la humanidad avanzan juntas."</p>
     </div>
   </div>
 </section>
 
-<!-- ======= TESTIMONIOS ======= -->
-<section id="testimonios" class="section testimonios">
+
+
+<!-- ======= RESEÑAS ======= -->
+<section id="reseñas" class="section Reseñas">
   <h2 data-translate="testimonials">Testimonios</h2>
   <div class="grid-proyectos">
+
     <div class="card">
-      <p data-translate="testimonial-1">“Josué es un profesional dedicado, con gran capacidad técnica y liderazgo.”</p>
-      <h4 data-translate="testimonial-1-author">- Docente, Universidad</h4>
+      <p data-translate="testimonial-1">"Josué Alejandro Chicas Mejía fue un estudiante destacado en la carrera de Técnico en Ingeniería en Sistemas y Redes Informáticas. Se caracterizó por su disciplina, compromiso académico y dominio de herramientas tecnológicas, programación y bases de datos.
+Con una actitud colaborativa, ética de trabajo ejemplar y gran capacidad de adaptación a nuevos entornos, demostró ser un profesional proactivo y con voluntad de aprendizaje continuo."</p>
+      <h4 data-translate="testimonial-1-author">Ing. Marvin Osmaro Parada Benitez - Docente Universidad Gerardo Barrios Facultad de Ciencias y Tecnología</h4>
     </div>
+
     <div class="card">
-      <p data-translate="testimonial-2">“Trabajar con Josué fue una excelente experiencia, siempre proactivo y enfocado.”</p>
-      <h4 data-translate="testimonial-2-author">- Compañero de proyecto</h4>
+      <p data-translate="testimonial-2">Josué Alejandro Chicas Mejía es un estudiante dedicado y entusiasta, con actitud positiva ante los retos, compromiso con su crecimiento y gran potencial para alcanzar sus metas.</p>
+      <h4 data-translate="testimonial-2-author">José Ovidio Ramos Alcántar Vicedecano de la Facultad de Ciencia y Tecnología Máster en Administración del Comercio Internacional Licenciado en Computación</h4>
     </div>
+
+    <div class="card">
+      <p data-translate="testimonial-3">Josué Alejandro Chicas, estudiante de Técnico en Ingeniería en Sistemas en la Universidad Gerardo Barrios, con experiencia en Software I, II y Software Libre. Destaca por su responsabilidad, cooperación y disposición para aprender, además de habilidades en liderazgo, proactividad, creatividad y trabajo en equipo. Entusiasta de las nuevas tecnologías y del aprendizaje continuo.</p>
+      <h4 data-translate="testimonial-3-author"> Ing.Carla Milagro López Vásquez  Máster en Ingeniería Web Licenciada en Computación Docente en la Facultad de Ciencia y Tecnología de la Universidad Gerardo Barrios</h4>
+    </div>
+
+    <div class="card">
+      <p data-translate="testimonial-4">Josué Alejandro Chicas Mejía desde hace dos años como estudiante de la carrera de Técnico en Ingeniería en Sistemas y Redes Informáticas. Se caracteriza por su respeto, responsabilidad y dedicación en cada proyecto académico. Posee buenas habilidades técnicas, trabaja bien en equipo y demuestra disposición para apoyar en las actividades de la Facultad. Además, destaca por su carisma, pensamiento estratégico y deseo constante de superación. Estoy seguro de que logrará excelentes resultados en cualquier área que decida emprender.</p>
+      <h4 data-translate="testimonial-4-author">Lic. Ms. Herbert Rene Cordero Henriquez Docente de la Facultad de Ciencia y Tecnología, Centro Regional de Usulután.</h4>
+    </div>
+
+    <div class="card">
+      <p data-translate="testimonial-5">Josué Alejandro Chicas Mejía, estudiante de la Universidad Gerardo Barrios, se destaca por su respeto hacia docentes y compañeros, así como por su dedicación en actividades y proyectos académicos. Demuestra responsabilidad, trabajo en equipo y disposición para colaborar. Además, posee habilidades sociales, carisma y pensamiento estratégico que le permiten afrontar desafíos con eficacia. Su actitud proactiva y deseo de superación evidencian su potencial para sobresalir en cualquier área que decida emprender.</p>
+      <h4 data-translate="testimonial-5-author">Ing. Ms. Alcir Gustavo Quintanilla Rodríguez Docente de la Facultad de Ciencia y Tecnología Centro Regional Usulután </h4>
+    </div>
+
   </div>
 </section>
+
+
 
 
 <!-- ======= INTERESES ======= -->
 <section id="intereses" class="section intereses">
   <h2 data-translate="interests">Intereses</h2>
-  <p data-translate="interests-text">
-    Me apasiona la programación, el desarrollo web, la tecnología móvil y la inteligencia artificial. 
-    También disfruto aprender sobre innovación tecnológica, diseño UX/UI y desarrollo sostenible.
-  </p>
-</section>
 
+  <div class="intereses-grid">
 
-<!-- ======= PUBLICACIONES ======= -->
-<section id="publicaciones" class="section publicaciones">
-  <h2 data-translate="publications">Publicaciones</h2>
-  <div class="grid-proyectos">
-    <div class="card">
-      <h3 data-translate="pub-1-title">Cómo desarrollar aplicaciones Android modernas</h3>
-      <p data-translate="pub-1-desc">Artículo sobre buenas prácticas en Android Studio.</p>
-      <a href="#" target="_blank" class="btn" data-translate="pub-1-link">Leer más</a>
+    <div class="interes-card">
+      <img src="CPU.jpeg" alt="Interés 1" class="interes-img">
+      <h3 data-translate="interest-1-title" class="interes-titulo">Programación</h3>
+      <p data-translate="interest-1-desc" class="interes-desc">
+        Me encanta crear software, resolver problemas lógicos y desarrollar aplicaciones funcionales.
+      </p>
     </div>
-    <div class="card">
-      <h3 data-translate="pub-2-title">El impacto del software libre en la educación</h3>
-      <p data-translate="pub-2-desc">Reflexión sobre el uso de herramientas abiertas en el aprendizaje.</p>
-      <a href="#" target="_blank" class="btn" data-translate="pub-2-link">Leer más</a>
+
+    <div class="interes-card">
+      <img src="Wed.jpeg" alt="Interés 2" class="interes-img">
+      <h3 data-translate="interest-2-title" class="interes-titulo">Desarrollo Web</h3>
+      <p data-translate="interest-2-desc" class="interes-desc">
+        Me apasiona construir interfaces modernas, rápidas y visualmente atractivas utilizando HTML, CSS y JavaScript.
+      </p>
     </div>
+
+    <div class="interes-card">
+      <img src="Manteni.jpeg" alt="Interés 3" class="interes-img">
+      <h3 data-translate="interest-3-title" class="interes-titulo">Mantenimiento de Computadoras</h3>
+      <p data-translate="interest-3-desc" class="interes-desc">
+        El mantenimiento de computadoras asegura equipos rápidos, seguros y siempre listos para trabajar.
+      </p>
+    </div>
+
+    <div class="interes-card">
+      <img src="Futbol.jpeg" alt="Interés 4" class="interes-img">
+      <h3 data-translate="interest-4-title" class="interes-titulo">Futbol</h3>
+      <p data-translate="interest-4-desc" class="interes-desc">
+        Mi pasión que une y mueve corazones.
+      </p>
+    </div>
+
   </div>
 </section>
+
+
+
+<!-- ======= DIPLOMAS ======= -->
+<section id="diplomas" class="section diplomas">
+  <h2 data-translate="diplomas">Diplomas</h2>
+
+  <div class="grid-proyectos">
+
+    <div class="card">
+      <img src="Prgra.jpg" alt="Diploma 1" class="pub-img">
+      <h3 data-translate="pub-1-title">C#: Programación orientada a objetos</h3>
+      <p data-translate="pub-1-desc">Este curso, de nivel intermedio, se enfocó en los principios fundamentales de la POO (como clases, objetos, herencia, polimorfismo y encapsulamiento) aplicados en el lenguaje de programación C#, esencial para desarrollar software modular y mantenible.</p>
+    </div>
+
+    <div class="card">
+      <img src="Electronica.png" alt="Diploma 2" class="pub-img">
+      <h3 data-translate="pub-2-title">Electrónica Básica Módulo 1</h3>
+      <p data-translate="pub-2-desc">Este curso introductorio probablemente cubrió conceptos fundamentales de electrónica, como componentes básicos, circuitos simples, y principios de voltaje, corriente y resistencia, ideal para quienes comienzan en el área técnica o de reparación electrónica.</p>
+    </div>
+
+    <div class="card">
+      <img src="Curso.jpg" alt="Diploma 3" class="pub-img">
+      <h3 data-translate="pub-3-title">Diploma sobre Doceava Edicion del Congreso Latinoamericano de Informatica y Comunicacion</h3>
+      <p data-translate="pub-3-desc">Este diploma acredita la participación en un congreso académico-profesional de alto nivel, centrado en las tendencias de tecnología, emprendimiento digital y economía digital en Latinoamérica.</p>
+    </div>
+
+    <div class="card">
+      <img src="Talleres.jpg" alt="Diploma 4" class="pub-img">
+      <h3 data-translate="pub-4-title">Diploma Creación de casos de prueba UX/UI,Desarrollo web,Introducción a DevOps, Introducción a la seguridad</h3>
+      <p data-translate="pub-4-desc">Estos talleres formaron parte del proyecto "Ciclo de vida de software" en la cátedra Desarrollo de sitios web.</p>
+    </div>
+
+  </div>
+</section>
+
 
 
 <!-- ======= CONTACTO ======= -->
@@ -225,18 +344,55 @@
     <p><a href="https://www.linkedin.com/in/josue-alejandro-chicas-mejia-3a478b291/" target="_blank"><i class="fab fa-linkedin logo-contacto"></i></a></p>
     <p><a href="https://github.com/AlejandroChicas" target="_blank"><i class="fab fa-github logo-contacto"></i></a></p>
     <p><a href="https://www.facebook.com/josue.chicass.90" target="_blank"><i class="fab fa-facebook logo-contacto"></i></a></p>
-    <p><a href="mailto:alejandrochicas@gmail.com" target="_blank"><i class="fas fa-envelope logo-contacto"></i></a></p>
+    <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=alejandrochicas@gmail.com" target="_blank"><i class="fas fa-envelope logo-contacto"></i></a></p>
   </div>
 </section>
+
+
 
 <!-- ======= FOOTER ======= -->
 <footer class="footer">
   <p>&copy; 2025 Josué Chicas - <span data-translate="rights">Todos los derechos reservados</span></p>
 </footer>
 
-<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+<!-- ====== BARRA DE BÚSQUEDA ====== -->
+
+<!-- ====== SCRIPT DE BÚSQUEDA FUNCIONAL ====== -->
+<script>
+const searchInput = document.getElementById("search-input");
+
+// Recuperar búsqueda previa al cargar la página
+window.addEventListener("DOMContentLoaded", () => {
+    const savedFilter = localStorage.getItem("searchFilter") || "";
+    searchInput.value = savedFilter;
+    filterSections(savedFilter);
+});
+
+// Función para filtrar secciones
+function filterSections(filter) {
+    filter = filter.toLowerCase();
+    const sections = document.querySelectorAll("section");
+
+    sections.forEach(sec => {
+        const title = sec.querySelector("h2") ? sec.querySelector("h2").innerText.toLowerCase() : "";
+        const content = sec.innerText.toLowerCase();
+        sec.style.display = (title.includes(filter) || content.includes(filter)) ? "block" : "none";
+    });
+}
+
+// Guardar búsqueda y filtrar en tiempo real
+searchInput.addEventListener("keyup", function () {
+    const filter = this.value;
+    localStorage.setItem("searchFilter", filter); // Guardar en localStorage
+    filterSections(filter);
+});
+</script>
+
+
+
 </body>
 </html>
-
