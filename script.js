@@ -74,6 +74,9 @@ const translations = {
 
     "testimonial-5": "\"Josué Alejandro Chicas Mejía, estudiante de la Universidad Gerardo Barrios, se destaca por su respeto hacia docentes y compañeros, así como por su dedicación en actividades y proyectos académicos. Demuestra responsabilidad, trabajo en equipo y disposición para colaborar. Además, posee habilidades sociales, carisma y pensamiento estratégico que le permiten afrontar desafíos con eficacia. Su actitud proactiva y deseo de superación evidencian su potencial para sobresalir en cualquier área que decida emprender.\"",
     "testimonial-5-author": "Ing. Ms. Alcir Gustavo Quintanilla Rodríguez Docente de la Facultad de Ciencia y Tecnología Centro Regional Usulután ",
+    
+    "testimonial-6": "\"Josué Alejandro Chicas Mejía se perfila como un profesional capaz de transformar su entorno, inspirar a otros y abrirse camino hacia grandes logros. Cada proyecto que realiza refleja disciplina, curiosidad intelectual y un deseo auténtico de aprender y mejorar.\"",
+    "testimonial-6-author": "Ing. Timotea Guadalupe Menjivar Docente a tiempo completo Universidad Gerardo Barrios, Centro Regional Usulután ",
 
 
     /* ===== INTERESES ===== */
@@ -185,7 +188,9 @@ const translations = {
 
     "testimonial-5": "\"Josué Alejandro Chicas Mejía, a student at Gerardo Barrios University, stands out for his respect for professors and classmates, as well as for his dedication to academic activities and projects. He demonstrates responsibility, teamwork, and a willingness to collaborate. Furthermore, he possesses social skills, charisma, and strategic thinking that allow him to face challenges effectively. His proactive attitude and desire for self-improvement demonstrate his potential to excel in any area he chooses to pursue.\"",
     "testimonial-5-author": "Eng. Ms. Alcir Gustavo Quintanilla Rodríguez Faculty of Science and Technology Usulután Regional Center",
-
+    
+    "testimonial-6": "\"Josué Alejandro Chicas Mejía is poised to be a professional capable of transforming his environment, inspiring others, and paving the way for great achievements. Each project he undertakes reflects discipline, intellectual curiosity, and a genuine desire to learn and improve.\"",
+    "testimonial-6-author": "Eng. Timotea Guadalupe Menjivar Full-time Professor Gerardo Barrios University, Usulután Regional Center",
 
     /* ===== INTERESTS ===== */
     "interests": "Interests",
@@ -219,6 +224,8 @@ const translations = {
   }
 };
   
+
+
 
 // Función para cambiar el idioma
 function changeLanguage(lang) {
